@@ -69,6 +69,10 @@
 		<div>
 			<dt>{{ details.user.username }}</dt>
 			<dd>{{ details.text }}</dd>
+      <dd>{{ details.date }}</dd>
+      {% if user.is_authenticated and user ==  details.user %}
+      <dd><a href="{% url 'update_activity' details.id %}">Update</a></dd>
+      {% endif %}
 		</div>
     {% endfor %}
 	</dl>

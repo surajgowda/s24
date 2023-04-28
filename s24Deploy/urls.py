@@ -24,4 +24,6 @@ urlpatterns = [
     path('update/',views.update, name='update'),
     path('activities/',views.pleaseupdate, name='doupdate'),
     path('dashboard/',views.dashboard, name='dashboard'),
+    path('formsubmitted/',views.formsubmitted, name='formsubmitted'),
+    path('updateactivity/<int:id>',views.updatecomment, name='update_activity'),
 ]
